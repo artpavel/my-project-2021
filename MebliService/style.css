@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap'); */
-
-@font-face {
+/* @font-face {
     font-family: 'Geometria-Bold';
     src: url('fonts/Geometria-Bold.woff') format('woff');
     font-weight: 700;
@@ -20,11 +19,14 @@
     src: url('fonts/geometria-heavy.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
-}
+} */
 
 
 /* Header and footer. Треба потім видалити!!!!!
 ====================================================== */
+
+
+/* Зверни увагу на сторінку CONTACT!!!!! */
 
 header {
     padding: 42px 0;
@@ -70,7 +72,8 @@ html {
 }
 
 h1 {
-    font-family: Geometria, sans-serif;
+    /* font-family: Geometria, sans-serif; */
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 64px;
     line-height: 100%;
@@ -78,7 +81,7 @@ h1 {
 }
 
 h2 {
-    font-family: Geometria, sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: normal;
     font-size: 56px;
     line-height: 1.2;
@@ -86,7 +89,7 @@ h2 {
 }
 
 h3 {
-    font-family: Geometria, sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: normal;
     font-size: 24px;
     line-height: 1.0;
@@ -94,7 +97,7 @@ h3 {
 }
 
 h4 {
-    font-family: Geometria, sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: normal;
     font-size: 21px;
     line-height: 1.4;
@@ -282,7 +285,7 @@ h4 {
 .productCard__item5 p.show,
 .productCard__item6 p.show {
     opacity: 0;
-    font-family: Geometria;
+    font-family: 'Merriweather';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -566,7 +569,7 @@ a.network:hover {
 }
 
 h5.list {
-    font-family: Geometria;
+    font-family: 'Merriweather', serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -810,20 +813,6 @@ img.mapContact {
     margin-bottom: 30px;
 }
 
-.wrapEmail {
-    width: 20px;
-    height: 16px;
-    border: 2px solid #1A3047;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-img.emailContact {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .info__row a {
     font-weight: 800;
     font-size: 18px;
@@ -835,6 +824,11 @@ img.emailContact {
 }
 
 .phone1 img.phone {
+    margin-bottom: 13px;
+    padding: 0;
+}
+
+img.emailContact {
     margin-bottom: 13px;
     padding: 0;
 }
@@ -904,10 +898,9 @@ img.emailContact {
 
 #mebel p {
     margin: 0 auto;
-    font-family: geometria;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 152px;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 153px;
     line-height: 120%;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -1014,7 +1007,7 @@ img.emailContact {
     background: #747F8B;
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 16px;
     transform: translateY(-1px);
 }
 
