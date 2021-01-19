@@ -1,0 +1,103 @@
+@import "_mixin";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    display: inline-block;
+    transition: all 0.4s;
+    text-decoration: none;
+    color: #4e4b48;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+html {
+    background-color: #f7f3ee;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    color: #4e4b48;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    @include adaptiv-font(64,
+    38);
+    line-height: 100%;
+    color: #f7f3ee;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    @include adaptiv-font(56,
+    28);
+    line-height: 1.2;
+    color: #1a3047;
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    @include adaptiv-font(48,
+    22);
+    line-height: 1;
+    color: #1a3047;
+}
+
+h4 {
+    font-family: "Merriweather", serif;
+    font-weight: normal;
+    @include adaptiv-font(32,
+    18);
+    line-height: 1.4;
+    color: #fff;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn1 {
+    min-width: 207px;
+    padding: 15px 40px;
+    background: #69afdc;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background: #4492c5;
+    }
+}
+
+.btn2 {
+    min-width: 170px;
+    padding: 15px 40px;
+    border: 2px solid #69afdc;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        background: #4492c5;
+        border: none;
+    }
+}
+
+li {
+    list-style: none;
+}

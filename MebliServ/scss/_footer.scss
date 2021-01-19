@@ -1,0 +1,151 @@
+footer {
+    background: #1a3047;
+    p {
+        color: #747f8b;
+        font-size: 14px;
+    }
+    a {
+        color: #f7f3ee;
+        font-size: 18px;
+    }
+    a.btn1 {
+        font-size: 14px;
+    }
+}
+
+.footer-body {
+    padding-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    ul {
+        margin-top: 24px;
+    }
+    li {
+        margin-bottom: 32px;
+    }
+}
+
+.footer-logo {
+    img {
+        width: 126px;
+        height: 96px;
+    }
+}
+
+.footer-contact {
+    width: 20%;
+    @include media-large {
+        width: 50%;
+        order: 4;
+    }
+    p {
+        margin-bottom: 14px;
+    }
+    a {
+        margin-bottom: 32px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &> :nth-child(6) {
+        color: #f7f3ee;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    &> :nth-child(7) {
+        margin-bottom: 56px;
+    }
+}
+
+.footer-info {
+    width: 20%;
+    @include media-middle {
+        order: 5;
+        margin-right: auto;
+    }
+    p {
+        font-family: "Merriweather", serif;
+        font-size: 18px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #747f8b;
+    }
+    a {
+        color: linear-gradient(104.35deg, #f1ece7 0.96%, #d6d0cc 102.08%);
+        font-size: 14px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.footer-catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    @include media-middle {
+        width: 80%;
+    }
+    p {
+        width: 100%;
+        font-family: "Merriweather", serif;
+        font-size: 18px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #747f8b;
+    }
+    a {
+        color: linear-gradient(104.35deg, #f1ece7 0.96%, #d6d0cc 102.08%);
+        font-size: 14px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+address {
+    border-top: 1px solid #747f8b;
+}
+
+.foot {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    &> :first-child {
+        margin-right: auto;
+    }
+    &> :last-child {
+        margin-left: 12px;
+    }
+}
+
+@include media-small {
+    .footer-logo {
+        margin-bottom: 32px;
+    }
+    .footer-contact,
+    .footer-info,
+    .footer-catalog {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .footer-info {
+        order: 1;
+    }
+    .footer-catalog {
+        order: 2;
+    }
+    .foot {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &> :first-child {
+            margin: 0;
+            margin-bottom: 12px;
+        }
+        &> :last-child {
+            margin: 0;
+            margin-top: 12px;
+        }
+    }
+}

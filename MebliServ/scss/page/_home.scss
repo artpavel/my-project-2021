@@ -1,0 +1,39 @@
+@import "../slider/_sliderBedroomHome";
+// *** BEDROOM ***
+.bedroom-title {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    position: absolute;
+    top: 38%;
+    left: 24%;
+    @include media-middle {
+        top: 25%;
+    }
+    @include media-small {
+        left: 14%;
+    }
+    &>p:first-child {
+        padding-bottom: 16px;
+        @include adaptiv-font(24, 14);
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #69afdc;
+    }
+    h1 {
+        margin-bottom: 24px;
+    }
+    h4 {
+        @include adaptiv-font(21, 16);
+        line-height: 100%;
+        color: #f7f3ee;
+        margin-bottom: 30px;
+    }
+    a {
+        color: #f7f3ee;
+    }
+}
+
+// *END BEDROOM*
