@@ -10,10 +10,12 @@
 
 a {
     display: inline-block;
-    transition: all 0.4s;
+    transition: all 0.4s ease-in-out;
     text-decoration: none;
     color: #4e4b48;
     cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
 }
 
 img {

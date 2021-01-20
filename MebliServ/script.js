@@ -8,18 +8,19 @@ burger.addEventListener('click', function() {
 //slider_page HOME_banner
 const slider = document.querySelector('#bedroom .swiper-container');
 let mySwiper = new Swiper(slider, {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function(index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function(index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
         },
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-})
+    })
+    // popup page HOME
