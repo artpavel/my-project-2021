@@ -208,7 +208,7 @@
             grid-template-areas: "homeCat1 homeCat1 homeCat1 homeCat2 homeCat2 homeCat2" "homeCat3 homeCat3 homeCat3 homeCat4 homeCat4 homeCat4" "homeCat5 homeCat5 homeCat5 homeCat6 homeCat6 homeCat6" "homeCat7 homeCat7 homeCat7 homeCat8 homeCat8 homeCat8";
         }
         @include media-middle {
-            padding: 0 70px;
+            padding: 0 20px;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(8, 1fr);
             grid-template-areas: "homeCat1" "homeCat2" "homeCat3" "homeCat4" "homeCat5" "homeCat6" "homeCat7" "homeCat8";
@@ -228,6 +228,19 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            z-index: 2;
+            @include media-small {
+                transform: scale(0.7) translateX(20%) translateY(20%);
+            }
+            @media screen and (max-width: 420px) {
+                display: none;
+            }
+        }
+        img.two {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
         }
     }
     .homeCat1 {
@@ -274,12 +287,23 @@
     max-width: 700px;
     background: #12202f;
     opacity: 0.9;
-    // transform: translateX(-100%);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    @include media-large {
+        max-width: 500px;
+    }
+    @include media-middle {
+        max-width: 400px;
+    }
+    @include media-small {
+        width: 100%;
+    }
 }
-
-.popup-body {}
-
-.popup-content {}
 
 .popup-close {
     margin-left: 163px;
@@ -326,6 +350,9 @@
         top: 50%;
         left: 0;
     }
+    @include media-middle {
+        margin: 0 374px 56px 150px;
+    }
 }
 
 .popup-text {
@@ -341,11 +368,204 @@
     ul {
         margin-left: 163px;
         margin-bottom: 344px;
+        @include media-middle {
+            margin-left: 100px;
+        }
     }
     a {
         padding-bottom: 3px;
     }
     a:hover {
         border-bottom: 3px solid #69afdc;
+    }
+}
+
+// *** HOME-NEWS ***
+#newspoduct {
+    margin-bottom: 132px;
+    padding-bottom: 132px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #1a3047;
+        position: absolute;
+        top: 0;
+        right: 50%;
+    }
+}
+
+.slider-top {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrap {
+    color: #fff;
+    padding-top: 72px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #747f8b;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #fff;
+    padding-left: 20px;
+}
+
+.swiper-slide-prev {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 100%;
+        background: linear-gradient(90deg, rgba(26, 48, 71, 0.8) 0%, #1a3047 77.61%);
+        transform: translateX(-4%) matrix(-1, 0, 0, 1, 0, 0);
+        z-index: 99;
+        @include media-large {
+            right: -4%;
+        }
+    }
+}
+
+.swiper-slide-next {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 100%;
+        background: linear-gradient(90deg, rgba(247, 243, 238, 0.8) 0%, #f7f3ee 77.61%);
+        z-index: 99;
+        @include media-large {
+            left: -4%;
+        }
+    }
+}
+
+.newsVels {
+    width: 100%;
+    background-image: linear-gradient( 180deg, rgba(26, 48, 71, 0.16) 53.33%, rgba(26, 48, 71, 0.88) 85.14%, rgba(26, 48, 71, 0.88) 85.14%), url(../images/home/slider1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    a {
+        padding: 395px 88px 40px 32px;
+        color: #fff;
+        @include adaptiv-font(21, 16);
+    }
+}
+
+.newsFranko {
+    width: 100%;
+    background-image: linear-gradient( 180deg, rgba(26, 48, 71, 0.16) 53.33%, rgba(26, 48, 71, 0.88) 85.14%, rgba(26, 48, 71, 0.88) 85.14%), url(../images/home/slider2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    p {
+        width: 130px;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 100%;
+        color: #ffffff;
+        padding: 13px 22px 11px 23px;
+        background: #69afdc;
+    }
+    a {
+        max-width: 350px;
+        padding: 312px 45px 40px 32px;
+        color: #fff;
+        @include adaptiv-font(21, 16);
+        text-align: left;
+    }
+}
+
+.newsFerrara {
+    width: 100%;
+    background-image: linear-gradient( 180deg, rgba(26, 48, 71, 0.16) 53.33%, rgba(26, 48, 71, 0.88) 85.14%, rgba(26, 48, 71, 0.88) 85.14%), url(../images/home/slider3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    p {
+        width: 130px;
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 100%;
+        color: #ffffff;
+        padding: 13px 22px 11px 23px;
+        background: #69afdc;
+    }
+    a {
+        // max-width: 380px;
+        padding: 340px 45px 40px 32px;
+        color: #fff;
+        @include adaptiv-font(21, 16);
+        text-align: left;
+    }
+}
+
+.slider-top {
+    position: relative;
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: none;
+    border: 2px solid #747f8b;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    &:hover {
+        border: 2px solid #69afdc;
+    }
+    & span {
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #747f8b;
+        border-left: 2px solid #747f8b;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-1px) translateY(-1px) rotate(135deg);
+    }
+    @include media-middle {
+        right: 5%;
+    }
+    @include media-small {
+        left: 80%;
+    }
+}
+
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    background: none;
+    border: 2px solid #747f8b;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    &:hover {
+        border: 2px solid #69afdc;
+    }
+    & span {
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #747f8b;
+        border-left: 2px solid #747f8b;
+        top: 50%;
+        left: 50%;
+        transform: translateX(1px) translateY(-1px) rotate(-45deg);
+    }
+    @include media-middle {
+        left: 80%;
+    }
+    @include media-small {
+        left: 60%;
     }
 }

@@ -8,19 +8,45 @@ burger.addEventListener('click', function() {
 //slider_page HOME_banner
 const slider = document.querySelector('#bedroom .swiper-container');
 let mySwiper = new Swiper(slider, {
-        slidesPerView: 1,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function(index, className) {
-                return '<span class="' + className + '">' + (index + 1) + '</span>';
-            },
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function(index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-    })
-    // popup page HOME
+});
+//slider_page HOME_news
+const sliderNews = document.querySelector('#newspoduct .swiper-container');
+let mySwiperNews = new Swiper(sliderNews, {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    autoHeight: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 1,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1500: {
+            slidesPerView: 4.1,
+            spaceBetween: 20,
+        }
+    }
+
+});
