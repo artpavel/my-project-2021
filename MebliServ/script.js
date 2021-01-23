@@ -50,3 +50,18 @@ let mySwiperNews = new Swiper(sliderNews, {
     }
 
 });
+//slider_page HOME_parma
+const sliderParma = document.querySelector('#parma .swiper-container');
+let mySwiperParma = new Swiper(sliderParma, {
+    slidesPerView: 1,
+    loop: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});

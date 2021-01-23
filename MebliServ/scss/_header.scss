@@ -50,11 +50,8 @@ header {
                 left: 118px;
             }
         }
-        @include media-large {
-            min-width: 100px;
-            padding: 10px 37px 10px 14px;
-        }
         @include media-small {
+            margin-top: 30px;
             &::after {
                 content: "";
             }
@@ -67,6 +64,7 @@ header {
 .menu-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     li:not(:last-child) {
         margin-right: 40px;
     }
@@ -98,7 +96,7 @@ header {
         top: 100px;
         flex-direction: column;
         justify-content: start;
-        background: #12202f;
+        background: #fff;
         opacity: 0.82;
         color: #fff;
         font-size: 18px;
@@ -256,9 +254,6 @@ button.header:before {
         left: 10px;
     }
     .header-lang {
-        display: none;
-    }
-    .header-btn {
         display: none;
     }
     .burger {
