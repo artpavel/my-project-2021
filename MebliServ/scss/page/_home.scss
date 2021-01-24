@@ -837,3 +837,87 @@ img.homeHuman {
         display: none;
     }
 }
+
+// *** CONECT ***
+#conect {
+    margin-bottom: 112px;
+    h3 {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(116, 127, 139, 0.3);
+        padding-right: 50%;
+    }
+    .conect {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        border-bottom: 1px solid rgba(116, 127, 139, 0.3);
+        img {
+            padding-left: 30px;
+        }
+        h5 {
+            width: 25%;
+            text-align: start;
+            padding-left: 110px;
+            font-family: Geometria;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 110%;
+            color: #1a3047;
+        }
+        p {
+            width: 60%;
+            padding-left: 84px;
+            padding-right: 20px;
+            padding-bottom: 32px;
+            font-size: 14px;
+            line-height: 160%;
+            color: #4e4b48;
+        }
+    }
+    .last {
+        background: #1a3047;
+        margin: 0;
+        padding-top: 32px;
+        h5 {
+            color: #f7f3ee;
+        }
+        p {
+            color: #f7f3ee;
+        }
+        &:hover {
+            border: 1px solid #747f8b;
+        }
+        a {
+            padding-top: 24px;
+            width: 100%;
+            color: #f7f3ee;
+            position: relative;
+            &::after {
+                content: "";
+                width: 32px;
+                height: 32px;
+                border-radius: 100%;
+                border: 2px solid #f7f3ee;
+                position: absolute;
+                top: 15px;
+                left: 160px;
+            }
+            &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-top: 1px solid #fff;
+                border-left: 1px solid #fff;
+                transform: rotate(135deg);
+                position: absolute;
+                top: 30px;
+                left: 173px;
+            }
+        }
+        a:hover::after {
+            border: 2px solid #69afdc;
+        }
+    }
+}
