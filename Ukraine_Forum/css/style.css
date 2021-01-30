@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&family=Roboto:wght@400;700;900&display=swap");
+html {
+  background-color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  color: #4e4b48;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-family: Open Sans, sans-serif;
+  font-weight: normal;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  line-height: 180%;
+  color: #102A41;
+}
+
+h1 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 88px;
+  font-size: calc(40px + 48 * ((100vw - 320px) / 1600));
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: calc(22px + 26 * ((100vw - 320px) / 1600));
+  line-height: 120%;
+  color: #102A41;
+}
+
+h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: calc(20px + 20 * ((100vw - 320px) / 1600));
+  line-height: 120%;
+  display: flex;
+  color: #102A41;
+}
+
+h4 {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: calc(18px + 22 * ((100vw - 320px) / 1600));
+  line-height: 120%;
+  display: flex;
+  color: #102A41;
+}
+
+h5 {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(18px + 14 * ((100vw - 320px) / 1600));
+  line-height: 125%;
+  color: #102A41;
+}
+
+.btn-yellow {
+  font-size: 14px;
+  padding: 20px 80px;
+  border: 1px solid #FDBB36;
+  border-radius: 32px;
+  text-align: center;
+  color: #102A41;
+  transition: all 0.4s ease-in-out;
+}
+.btn-yellow:hover {
+  background: #FDBB36;
+  font-weight: bold;
+}
+
+.btn-icon {
+  font-family: Roboto, sans-serif;
+  padding: 22px 30px 20px 82px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(16, 42, 65, 0.3);
+  border-radius: 32px;
+  position: relative;
+}
+.btn-icon::before {
+  content: url("../images/btn_icon.png");
+  padding: 14px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.btn-icon:hover {
+  padding-left: 70px;
+}
+.btn-icon:hover::before {
+  background: #1DBFE5;
+}
+
+.btn-yellow-footer {
+  font-family: Roboto, sans-serif;
+  padding: 15px 80px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FDBB36;
+  border: 1px solid #FDBB36;
+  border-radius: 32px;
+}
+.btn-yellow-footer:hover {
+  background: #FDBB36;
+  font-weight: bold;
+  color: black;
+}
+
+.btn-icon-footer {
+  font-family: Roboto, sans-serif;
+  padding: 15px 80px 15px 85px;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1DBFE5;
+  border: 1px solid #1DBFE5;
+  border-radius: 32px;
+  position: relative;
+}
+.btn-icon-footer::before {
+  content: url("../images/iconButtonFooter.png");
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+}
+.btn-icon-footer:hover {
+  padding-left: 70px;
+  padding-right: 60px;
+  font-weight: bold;
+  background: #b0b1b5;
+}
+.btn-icon-footer:hover::before {
+  content: url("../images/iconButtonFooter.png");
+  position: absolute;
+  left: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
